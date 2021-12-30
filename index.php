@@ -1,7 +1,7 @@
 <?php
 $theme = "light";
 $title = "Template";
-$footer = "I really 💚 <a href='https://www.paypal.com/paypalme/dmpop'>coffee</a>";
+$footer = "I really ❤️ <a href='https://www.paypal.com/paypalme/dmpop'>coffee</a>";
 ?>
 
 <!DOCTYPE html>
@@ -59,11 +59,11 @@ $footer = "I really 💚 <a href='https://www.paypal.com/paypalme/dmpop'>coffee<
 	<div class="card text-center">
 		<div style="margin-top: 1em; margin-bottom: 1em;">
 			<img style="display: inline; height: 2.5em; vertical-align: middle;" src="favicon.svg" alt="logo" />
-			<h1 style="display: inline; margin-top: 0em; vertical-align: middle; letter-spacing: 3px; color: #33cc33;"><?php echo $title; ?></h1>
+			<h1 style="display: inline; margin-top: 0em; vertical-align: middle; letter-spacing: 3px;"><?php echo $title; ?></h1>
 		</div>
 		<hr style="margin-bottom: 2em;">
 		<p>
-			Text and PHP code goes here.
+			Today is: <strong><?php echo date('l, M d, Y'); ?></strong>
 		</p>
 		<!-- Switch theme START -->
 		<p>Switch theme:
@@ -82,9 +82,9 @@ $footer = "I really 💚 <a href='https://www.paypal.com/paypalme/dmpop'>coffee<
 		</p>
 		<!-- Switch theme END -->
 	</div>
-	<div class="text-center">
+	<p class="text-center">
 		<?php echo $footer; ?>
-	</div>
+	</p>
 </body>
 
 </html>
