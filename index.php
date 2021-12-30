@@ -23,6 +23,36 @@ $footer = "I really 💚 <a href='https://www.paypal.com/paypalme/dmpop'>coffee<
 			window.history.replaceState(null, null, window.location.href);
 		}
 	</script>
+
+	<!-- Switch theme START -->
+	<script>
+		function switchTheme(el) {
+			document.documentElement.setAttribute('data-theme', el.value)
+		}
+
+		function switchCSS(cssid, el) {
+			document.getElementById(cssid).href = el.value;
+		}
+
+		function addFontSize(addPx) {
+			html = document.querySelector('html');
+			currentSize = parseFloat(window.getComputedStyle(html, null)
+				.getPropertyValue('font-size'));
+			html.style.fontSize = (currentSize + addPx) + 'px';
+		}
+
+		function toggleDarkMode(el) {
+			var theme = 'light'
+			if (el.innerText == '☪') {
+				el.innerText = '☀';
+				theme = 'dark';
+			} else {
+				el.innerText = '☪';
+			}
+			document.documentElement.setAttribute('data-theme', theme)
+		}
+	</script>
+	<!-- Switch theme END -->
 </head>
 
 <body>
@@ -35,6 +65,22 @@ $footer = "I really 💚 <a href='https://www.paypal.com/paypalme/dmpop'>coffee<
 		<p>
 			Text and PHP code goes here.
 		</p>
+		<!-- Switch theme START -->
+		<p>Switch theme:
+			<select id="theme" onchange="switchTheme(this)">
+				<option value="light">Light</option>
+				<option value="dark">Dark</option>
+				<option value="sepia">Sepia</option>
+				<option value="milligram">Milligram</option>
+				<option value="pure">Pure</option>
+				<option value="sakura">Sakura</option>
+				<option value="skeleton">Skeleton</option>
+				<option value="bootstrap">Bootstrap</option>
+				<option value="medium">Medium</option>
+				<option value="tufte">Tufte</option>
+			</select>
+		</p>
+		<!-- Switch theme END -->
 	</div>
 	<div class="text-center">
 		<?php echo $footer; ?>
