@@ -1,7 +1,5 @@
 <?php
-$theme = "light";
-$title = "Template";
-$footer = "I really ❤️ <a href='https://www.paypal.com/paypalme/dmpop'>coffee</a>";
+include("config.php");
 ?>
 
 <!DOCTYPE html>
@@ -81,10 +79,10 @@ $footer = "I really ❤️ <a href='https://www.paypal.com/paypalme/dmpop'>coffe
 			</select>
 		</p>
 		<!-- Switch theme END -->
+		<div style="margin-bottom: 1em; margin-top: 1em;">
+			<?php echo $footer; ?>
+		</div>
 	</div>
-	<p class="text-center">
-		<?php echo $footer; ?>
-	</p>
 </body>
 
 </html>
